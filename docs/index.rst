@@ -157,10 +157,10 @@ Default template uses Twitter Bootstrap classes::
 * breadcrumbs - list of breadcrumbs elements, each element contains url and label
 * breadcrumbs_total - total number of breadcrumbs elements
 
-To use Twitter Bootstrap V3 template instead of V2, use::
+To use Twitter Bootstrap V2 template instead of V3, use::
 
     {% block content %}
-        {% render_breadcrumbs "django_bootstrap_breadcrumbs/bootstrap3.html" %}
+        {% render_breadcrumbs "django_bootstrap_breadcrumbs/bootstrap2.html" %}
     {% endblock %}
 
 With 0.6.0 new template tag was added for clearing breadcrumbs list:
