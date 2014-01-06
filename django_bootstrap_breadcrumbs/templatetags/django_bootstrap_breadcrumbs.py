@@ -81,7 +81,7 @@ def render_breadcrumbs(context, *args):
     if args:
         template_path = args[0]
     else:
-        template_path = 'django_bootstrap_breadcrumbs/bootstrap2.html'
+        template_path = 'django_bootstrap_breadcrumbs/bootstrap3.html'
 
     links = []
     for (label, viewname, view_args) in context['request'].META.get(
