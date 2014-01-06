@@ -157,11 +157,20 @@ Default template uses Twitter Bootstrap classes::
 * breadcrumbs - list of breadcrumbs elements, each element contains url and label
 * breadcrumbs_total - total number of breadcrumbs elements
 
-To use Twitter Bootstrap V2 template instead of V3, use::
+By default, django-bootstrap-breadcrumbs uses the a Bootstrap 3.
+This setting is defined in the globally variable.
+
+you can change globally to bootstrap2, including the following in your settings line::
+
+    BOOTSTRAP_BREADCRUMB_TEMPLATE = 'django_bootstrap_breadcrumbs/bootstrap2.html'
+
+
+Or, to use Twitter Bootstrap V2 template instead of V3, locally, use::
 
     {% block content %}
         {% render_breadcrumbs "django_bootstrap_breadcrumbs/bootstrap2.html" %}
     {% endblock %}
+
 
 With 0.6.0 new template tag was added for clearing breadcrumbs list:
 
@@ -251,7 +260,7 @@ Result::
 Changelog
 =========
 
-* 0.6.3 - Twitter Bootstrap 3 by default
+* 0.6.3 - Twitter Bootstrap 3 by default and added setting variable to change template
 * 0.6.2 - license changed to MIT
 * 0.6.1 - python3 support
 * 0.6.0 - added clear_breadcrumbs template tag
@@ -276,3 +285,4 @@ Contributors:
 * gnuwho
 * Christian Dullweber
 * Eric Davis (edavis)
+* Fabio C. Barrionuevo da Luz (@luzfcb)

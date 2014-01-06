@@ -19,7 +19,10 @@ from django.utils.encoding import smart_text
 from django.utils.translation import ugettext as _
 from django.db.models import Model
 from django import template
+from django.conf import settings
 
+DBBTEMPLATE = str(getattr(settings, 'BOOTSTRAP_BREADCRUMB_TEMPLATE',
+                  'django_bootstrap_breadcrumbs/bootstrap3.html'))
 
 logger = logging.getLogger(__name__)
 
@@ -81,7 +84,7 @@ def render_breadcrumbs(context, *args):
     if args:
         template_path = args[0]
     else:
-        template_path = 'django_bootstrap_breadcrumbs/bootstrap3.html'
+        template_path = DBBTEMPLATE
 
     links = []
     for (label, viewname, view_args) in context['request'].META.get(
